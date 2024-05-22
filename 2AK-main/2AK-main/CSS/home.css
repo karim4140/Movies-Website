@@ -1,0 +1,661 @@
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #030303;
+}
+/*
+    this is style for header
+ */
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #030303;
+}
+*{
+    box-sizing: border-box;
+}
+nav {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #8980803f;
+}
+.btton {
+    margin-top:0px;
+    margin-bottom: 2px;
+    font-size: 1rem;
+    padding: 0.25em 0.75em;
+    background-color: #000;
+    border: 3px solid #f5c518;
+    border-radius: 1em;
+    color: #fff;
+    font-weight: 800;
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s;
+    box-shadow: -5px 5px 0px 0px #e4be33;
+}
+
+.btton:hover {
+    transform: translate(5px, -5px);
+}
+.scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Style for the horizontal scrollbar */
+  .scroll-container::-webkit-scrollbar {
+    height: 12px;
+    width: 8px;
+  }
+
+  .scroll-container::-webkit-scrollbar-thumb {
+    background-color: #f5c518;
+    width: 3px;
+     /* Change the color as needed */ /* Make it a circle */
+  }
+
+  .scroll-container::-webkit-scrollbar-track {
+    background-color: #ecf0f1; /* Change the color as needed */
+    border-radius: none;
+  }
+.search-bar {
+    justify-content: center;
+    display: inline-block;
+    height: 90%;
+    margin-top: 10px;
+    width: 700px;
+    padding: 0;
+    font-size: 14px;
+}
+.menu select{
+    margin: 5px;
+    display: inline-block;
+    font-weight: 600;
+    width: 100px;
+    height: 100%;
+    border: none;
+    padding: 4px 6px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+.watchlist button,
+.sign-in button,
+.lang button,
+.about button,
+.home button {
+    margin: 5px;
+    display: inline-block;
+    font-weight: 600;
+    width: 100px;
+    height: 100%;
+    border: none;
+    padding: 4px 6px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+}
+.watchlist button:hover,
+.sign-in button:hover,
+.lang button:hover,
+.about button:hover,
+.home button:hover {
+    border-radius: 4px;
+    background: linear-gradient(to right, #030303, #f5c518);
+    box-shadow: 2px 2px 5px #f5c518;
+}
+.btn {
+    width: 130px;
+    height: 40px;
+    margin-bottom:4px ;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.5s ease-in-out;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    color: white;
+}
+
+.btn:hover {
+    box-shadow: 0 0 20px 0px #2e2e2e3a;
+}
+
+.btn .icon {
+    position: absolute;
+    height: 40px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.btn .text {
+    transform: translateX(55px);
+}
+
+.btn:hover .icon {
+    width: 175px;
+}
+
+.btn:hover .text {
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:active .icon {
+    transform: scale(0.85);
+}
+form input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+form button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #f5c518;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: linear-gradient(to right, #030303, #f5c518);;
+}
+
+form::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/*
+  panel
+ */
+.panel {
+    position: relative;
+    background-color: #f5c518;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#pannel_head {
+    text-align: center;
+    margin-top: 0; /* Remove default margin to bring the text to the top */
+}
+#pannel_img{
+    width:100%;
+    height:300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/*
+    body
+ */
+#title1 {
+    margin-top:100px;
+    margin-left:50px;
+}
+
+#title11 {
+    font-weight: 900;
+    text-decoration: none; /* Remove underline and other decorations */
+    color: white; /* Set the text color */
+    display: inline-block; /* Ensure that the anchor behaves like a block element */
+    position: relative;
+}
+
+#pa11,
+#pa12 {
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+#pa11:hover + #pa12 #pa13,
+#pa12:hover #pa13 {
+    color: red; /* Change the color when hovering over ">" or "Top Items" */
+}
+#pa11{
+    color: #f5c518;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#pa12{
+    color: white;
+    font-size: 20px;
+}
+
+#pa13{
+    color: #f5c518;
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/*.film-block {*/
+/*    display: inline-block;*/
+/*}*/
+.film{
+    flex: 0 0 auto;
+    margin-top:15px;
+    margin-left:50px;
+    display: inline-block;
+    flex-wrap: wrap;
+    height: 500px;
+    background-color: rgba(34, 33, 33, 0.741);
+    width: 200px;
+}
+.film-info{
+    margin: 10px 5px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+}
+.film img {
+    display: inline-block;
+    width: 100%;
+    height: 300px;
+}
+
+.film-rating {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.film-rating span {
+    font-size: 18px;
+    color: white;
+    margin-right: 2px;
+    font-weight: 800;
+}
+
+.rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: center;
+}
+
+.rating  span {
+    display: inline-block;
+    font-size: larger;
+    color: #5799ef;
+    margin: -1px;
+}
+
+
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+    content: "\2605";
+    position: absolute;
+    color: gold;
+    box-shadow: 1px 1px 1px yellow; /* Adjust the values as needed */
+}
+.film  a{
+    color: aliceblue;
+    text-decoration: none;
+}
+.film a:hover{
+    text-decoration: underline;
+}
+.watch button {
+    width: 90%;
+    height: 30px;
+    display: inline-block;
+    margin-left: 5%;
+    margin-top: 15px;
+    align-items: center;
+    color: #5799ef;
+    background-color: hsla(0,0%,100%,.08);
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+.watch button:hover{
+    background-color: rgb(34, 33, 33);
+}
+.trail button{
+    background: transparent;
+    width: 100px;
+    height: 35px;
+    display: inline-block;
+    margin-left: 25%;
+    margin-top: 15px;
+    align-items: center;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.trail button:hover{
+    background-color: rgb(34, 33, 33);
+}
+
+.scroll-container {
+    overflow: hidden;
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.scroll-left {
+    left: 10px;
+}
+
+.scroll-right {
+    right: 10px;
+}
+
+#title2 {
+    margin-top:100px;
+    margin-left:50px;
+}
+
+#title21 {
+    font-weight: 900;
+    text-decoration: none; /* Remove underline and other decorations */
+    color: white; /* Set the text color */
+    display: inline-block; /* Ensure that the anchor behaves like a block element */
+    position: relative;
+}
+
+#pa21,
+#pa22 {
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+#pa21:hover + #pa22 #pa23,
+#pa22:hover #pa23 {
+    color: red; /* Change the color when hovering over ">" or "Top Items" */
+}
+#pa21{
+    color: #f5c518;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#pa22{
+    color: white;
+    font-size: 20px;
+}
+
+#pa23{
+    color: #f5c518;
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+#title3 {
+    margin-top:100px;
+    margin-left:50px;
+}
+
+#title31 {
+    font-weight: 900;
+    text-decoration: none; /* Remove underline and other decorations */
+    color: white; /* Set the text color */
+    display: inline-block; /* Ensure that the anchor behaves like a block element */
+    position: relative;
+}
+
+#pa31,
+#pa32 {
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+#pa31:hover + #pa32 #pa33,
+#pa32:hover #pa33 {
+    color: red; /* Change the color when hovering over ">" or "Top Items" */
+}
+#pa31{
+    color: #f5c518;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#pa32{
+    color: white;
+    font-size: 20px;
+}
+
+#pa33{
+    color: #f5c518;
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/*
+    this style for footer
+*/
+footer {
+    height: auto;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 0px;
+    margin-top: 30px;
+}
+/* Line styles */
+.footer-line-1, .footer-line-2 {
+    margin: 10px 0;
+}
+.footer-line-2 a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 800;
+    margin: 15px;
+    background: transparent;
+}
+
+.footer-line-2 a:hover{
+    text-decoration: underline;
+}
+
+/* Copyright styles */
+.copyright {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #fff;
+}
+footer .fa {
+    padding: 5px;
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 5px;
+}
+footer .fa:hover {
+    opacity: 0.7;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+.container1 {
+    margin-top: 20px;
+    margin-left:2.5%;
+    border: solid 1px yellow;
+    border-top: none;
+    box-shadow: 2px 4px 6px #f5c518;
+    width: 95%;
+    height: 570px;
+    display: flex;
+    background-color: rgb(0, 0, 0);
+}
+
+.left-boxes {
+    margin-left:20px;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.upper-left-box {
+    width: 100%;
+    height: 420px;
+    background-color: #c42424; /* Add your preferred background color */
+    display: inline-block;
+}
+
+.upper-left-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.lower-left-box {
+    width: 100%;
+    height: 150px;
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    padding: 10px;
+    animation: fadeIn 4s ease-in-out infinite; /* Added 'infinite' for continuous repetition */
+}
+
+
+.right-boxes {
+    margin-left: 15px;
+    border: none;
+    height: 500px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-box {
+    width: 70%;
+    height: 160px;
+    margin-bottom: 5px;
+    color: #f5c518;
+    font-size: 25px;
+    font-weight: 700;
+    border: none;
+    display: inline-block; 
+    background:transparent;
+    padding:0%; 
+}
+.right-box > div {
+    width: 100%;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0%;
+    height: 100%;
+}
+.right-box > div img{
+    width: 100%;
+    height: 105%;
+    object-fit:cover;
+}
+
+/* The last child of the right-box doesn't need margin-right */
+.right-box > div:last-child {
+    height: 90%;
+    padding-top: 5px;
+    padding-left: 5px;
+    margin-right: 5px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.right-box button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent; /* Make the button background transparent */
+    color: transparent; /* Make the button text transparent */
+    cursor: pointer;
+}
+.right-box button:hover{
+    box-shadow: 0 2px 3px yellow;
+}

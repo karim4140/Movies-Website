@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title id="title"></title>
+    <link rel="icon" href="/Media/movie-frame.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./CSS/allFilms.css">
+    <link rel="stylesheet" href="./CSS/home.css">
+    <link rel="stylesheet" href="./CSS/about.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <button class= "btton " onclick="window.open('Home.html','_self')">
+                    2AK
+                </button>
+            </div>
+            <div class="about">
+                <button id="about" onclick="window.open('about.html','_self')">About us</button>
+            </div>
+            <div class="home"><button id="myButton">Home</button></div>
+            <script>
+                document.getElementById("myButton").addEventListener("click", function() {
+                    window.location.assign("Home.html");
+                });
+            </script>
+            <div class="search-bar">
+                <form class="example" action="#" onsubmit="return searchMovies()">
+                    <input type="text" id="searchInput" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+
+            <script>
+                function searchMovies() {
+                    // Get the search input element
+                    const searchInput = document.getElementById('searchInput');
+                    const searchTerm = searchInput.value.trim();
+
+                    if (searchTerm !== "") {
+                        window.location.href = 'allFilms.html?ok=1&key=' + encodeURIComponent(searchTerm);
+                    }
+
+                    // Return false to prevent form submission
+                    return false;
+                }
+            </script>
+
+            <div class="watchlist">
+                <button id="watch" onclick="window.open('watch.html','_self')">Watchlist</button>
+            </div>
+            <div class="sign-in">
+                <button id="sign" onclick="window.open('index.html','_blank')">Sign In</button>
+            </div>
+            <!-- <div class="lang">
+                <button>EN</button>
+            </div> -->
+        </nav>
+    </header>
+</section>
+    <section>
+        <div class="abt-span">THE WEBSITE DEVELOPERS</div>
+        <div class="container-abt" id="container-abt"></div>
+              <script>
+                let card = document.getElementById("container-abt")
+                let names = ["Karim Ahmed","Ali Hossam","Ali Mohamed","Moamen Gaber","Nada Gharib","Mahmoud"]
+                let imgs = ["/2AK-main/Media/WhatsApp Image 2023-12-09 at 02.02.57_f87e9dd0.jpg",
+                "/2AK-main/Media/WhatsApp Image 2023-12-09 at 04.17.14_de6a34db.jpg",
+                "/2AK-main/Media/WhatsApp Image 2023-12-09 at 04.18.45_63ee8e5b.jpg",
+                "/2AK-main/Media/WhatsApp Image 2023-12-09 at 04.18.45_fa0f0799.jpg",
+                "/2AK-main/Media/WhatsApp Image 2023-12-09 at 18.59.44_92c8b5c9.jpg",
+                "/2AK-main/Media/WhatsApp Image 2023-12-09 at 04.50.04_dcf24555.jpg"]
+                let descriptions = [
+                "A passionate and dedicated Communication and Electronics Engineering student in my second year, I am constantly driven to expand my knowledge and skills in preparation for my future career. From an early age, I have demonstrated my commitment to excellence",
+                "Communication and Computer Engineering student at SFE, Egypt - Competitive programming trainee - Specialist @Codeforces - Codeforces: Tesla_- leetcode: AliHossam ..etc.",
+                "Communication and Computer Engineering student at SFE",
+                "Student at Shoubra faculty of engineering communications and computing branch Loves being athletic and going to the Gym",
+                "I am Studing engineering at the Engineering College in Shubra and trainee at Shubra creators team .",
+                "Communication and Computer Engineering student at SFE"
+                ]
+                let holder =""
+                for(let i=0;i<6;i++){
+                    holder += `<div class="card">
+                        <img src="${imgs[i]}" alt="">
+                        <div class="card__content">
+                          <p class="card__title">${names[i]}</p>
+                          <p class="card__description">${descriptions[i]}</p>
+                        </div>
+                      </div> `
+                }
+                card.innerHTML = holder
+              </script>
+        </div>         
+    </section>
+    <section id="foot">
+        <footer>
+            <!-- First line: Buttons -->
+            <div class="footer-line-1">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-google"></i></a>
+            </div>
+          
+            <!-- Second line: Links -->
+            <div class="footer-line-2">
+              <a href="#">Advertising</a>
+              <a href="#">Jobs</a>
+              <a href="#">Help</a>
+              <a href="#">Conditions of Use</a>
+              <a href="#">Privacy Policy</a>
+            </div>
+          
+            <!-- Third line: Copyright -->
+            <div class="footer-line copyright">
+              © 2023 Your Website. All rights reserved.
+              <span>&#169;</span>
+            </div>
+          </footer>
+          
+    </section>
+</body>

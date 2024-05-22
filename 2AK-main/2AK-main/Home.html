@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>2AK Movies</title>
+        <link rel="icon" href="/Media/movie-frame.png" type="image/x-icon">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="CSS/home.css">
+    </head>
+    <body class ="body">
+    <!-- Include the content of each part using <object> or <iframe> -->
+    <section id="bar">
+        <header>
+            <nav>
+                <div class="logo">
+                    <button class= "btton">
+                        2AK
+                    </button>
+                </div>
+                <div class="about">
+                    <button id="about" onclick="window.open('about.html','_self')">About us</button>
+                </div>
+               <!-- <div class="menu">
+                    <button class="btn">
+                    <span class="icon">
+                        <svg viewBox="0 0 175 70" width="35" height="40">
+                            <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                            <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                            <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                        </svg>
+                    </span>
+                        <span class="text">Menu</span>
+                    </button>
+                </div>  -->
+                <div class="search-bar">
+                    <form class="example" action="#" onsubmit="return searchMovies()">
+                        <input type="text" id="searchInput" placeholder="Search.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <script>
+                    function searchMovies() {
+                        const searchTerm = searchInput.value.trim();
+
+                        if (searchTerm !== "") {
+                            window.location.assign('allFilms.html?ok=1&key=') + encodeURIComponent(searchTerm);
+                        }
+                        // Return false to prevent form submission
+                        return false;
+                    }
+                </script>
+                <div class="watchlist">
+                    <button id="watch" onclick="window.open('watch.html','_self')">Watchlist</button>
+                </div>
+                <div class="sign-in">
+                    <button id="sign" onclick="window.open('index.html','_self')">Sign In</button>
+                </div>
+                <!-- <div class="lang">
+                    <button>EN</button>
+                </div> -->
+            </nav>
+        </header>
+    </section>
+
+
+
+    <div class="container1">
+        <div class="left-boxes">
+            <div class="upper-left-box" id="upperLeftBox"><img src="Media/AAAAQfCNr1hsF-rMFMziP8OLuuPs4VaDoNU5NEdByY1Xq5F9eVvN_XpJh1UYaM5udhmRQtPj6Ac-lyEMlQe6JJFkp5bJ_Xy0Hpfh8tScOaUwmt14qOJy-CWqWzN33vupdu8g-B5jlftDhGpdEmi12mcQtJIdMz8.jpg" alt=""></div>
+            <div class="lower-left-box" id="lowerLeftBox"><p style="margin-bottom: 5px; margin-top:0%;">2AK Movies - All what you are searching for , And More .</p><p style="font-size: 20px; font-weight:600; margin-top:0;">It Became Easy !</p></div>
+        </div>
+        <div class="right-boxes">
+            <div class="right-box" style="height: 20px; margin-top: -15px; margin-bottom: 20px;"><p>Featured today:</p></div>
+            <button class="right-box" style="margin-top: 15px;" onclick="window.open('allFilms.html?ok=0&key=&quot;&quot;','_self')" id="myButton1">
+                <div><img src="Media\Cillian-Murphy-Talks-About-Sex-Scenes-in-Oppenheimer-1024x537.png" alt=""></div>
+            </button>
+            <button class="right-box" onclick="window.open('allFilms.html?ok=0&key=&quot;&quot;','_self')" id="myButton2">
+                <div><img src="Media\MV5BNzJjZDdiMTUtNDRhOS00MGIzLWE3ZjAtZTRjMTk2ZDBlYWU5XkEyXkFqcGdeQWFkcmllY2xh._V1_QL75_UY281_CR0,0,500,281_.jpg" alt=""></div>
+            </button>
+            <button class="right-box" style="margin-bottom: 10px;" onclick="window.open('allFilms.html?ok=0&key=&quot;&quot;','_self')" id="myButton3">
+                <div><img src="Media\blood-coast-netflix-review.jpg" alt=""></div>
+            </button>
+        </div>
+    </div>
+
+
+
+    <div class="top-watched" >
+        <div id = "title1">
+            <a href = "allFilms.html?ok=0&key=&quot;&quot;" id = "title11" target="_self">
+                <span id = "pa11"> |</span>
+                <span id = "pa12"> Top Watched &nbsp; </span>
+                <span id = "pa13"> > </span>
+            </a>
+        </div>
+        <div class="scroll-container" id="top_watched_films">
+            <!-- Add more film elements as needed -->
+        </div>
+    </div>
+
+    <div class="films" >
+        <div id = "title2">
+            <a href = "allFilms.html?ok=0&key=&quot;&quot;" id = "title21" target="_self">
+                <span id = "pa21"> |</span>
+                <span id = "pa22"> Films &nbsp; </span>
+                <span id = "pa23"> > </span>
+            </a>
+        </div>
+        <div class="scroll-container" id="films">
+            <!-- Add more film elements as needed -->
+        </div>
+    </div>
+
+    <div class="tv-shows" >
+        <div id = "title3">
+            <a href = "allFilms.html?ok=0&key=&quot;&quot;" id = "title31" target="_self">
+                <span id = "pa31"> |</span>
+                <span id = "pa32"> TV Shows &nbsp; </span>
+                <span id = "pa33"> > </span>
+            </a>
+        </div>
+        <div class="scroll-container" id="tv-shows">
+            <!-- Add more film elements as needed -->
+        </div>
+    </div>
+
+
+
+
+    <section id="foot">
+        <footer>
+            <!-- First line: Buttons -->
+            <div class="footer-line-1">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google"></i></a>
+            </div>
+
+            <!-- Second line: Links -->
+            <div class="footer-line-2">
+                <a href="#">Advertising</a>
+                <a href="#">Jobs</a>
+                <a href="#">Help</a>
+                <a href="#">Conditions of Use</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <!-- Third line: Copyright -->
+            <div class="footer-line copyright">
+                © 2023 Your Website. All rights reserved.
+                <span>&#169;</span>
+            </div>
+        </footer>
+
+    </section>
+    <script src="/2AK-main/Js/home.js"></script>
+    </body>
+</html>

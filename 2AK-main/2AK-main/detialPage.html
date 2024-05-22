@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title id="title">Title</title>
+    <link rel="stylesheet" href="CSS/detial.css">
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="icon" href="/Media/movie-frame.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section>
+        <header>
+            <nav>
+                <div class="logo">
+                    <button class= "btton " onclick="window.open('Home.html','_self')">
+                        2AK
+                    </button>
+                </div>
+                <div class="about">
+                    <button id="about" onclick="window.open('about.html','_self')">About us</button>
+                </div>
+                <div class="home"><button id="myButton">Home</button></div>
+                <script>
+                    document.getElementById("myButton").addEventListener("click", function() {
+                        window.location.assign("Home.html");
+                    });
+                </script>
+                <div class="search-bar">
+                    <form class="example" action="#" onsubmit="return searchMovies()">
+                        <input type="text" id="searchInput" placeholder="Search.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+
+                <script>
+                    function searchMovies() {
+                        // Get the search input element
+                        const searchInput = document.getElementById('searchInput');
+                        const searchTerm = searchInput.value.trim();
+
+                        if (searchTerm !== "") {
+                            window.location.href = 'allFilms.html?ok=1&key=' + encodeURIComponent(searchTerm);
+                        }
+
+                        // Return false to prevent form submission
+                        return false;
+                    }
+                </script>
+
+                <div class="watchlist">
+                    <button id="watch" onclick="window.open('watch.html','_self')">Watchlist</button>
+                </div>
+                <div class="sign-in">
+                    <button id="sign" onclick="window.open('index.html','_blank')">Sign In</button>
+                </div>
+                <!-- <div class="lang">
+                    <button>EN</button>
+                </div> -->
+            </nav>
+        </header>
+    </section>
+    <div class="background">
+        <div class="upper" id = "dynamicElement" ></div>
+        <!-- Container centered in the middle -->
+        <div class="container" id="container" >
+            <!-- Movie details -->
+
+        </div>
+    </div>
+
+    <div class="more" >
+        <div id = "title4">
+            <a href = "allFilms.html?ok=0&key=&quot;&quot;" id = "title41">
+                <span id = "pa41"> |</span>
+                <span id = "pa42"> More For You  &nbsp; </span>
+                <span id = "pa43"> > </span>
+            </a>
+        </div>
+        <div class="scroll-container" id="more">
+            <!-- Add more film elements as needed -->
+        </div>
+    </div>
+    <section>
+        <footer>
+            <!-- First line: Buttons -->
+            <div class="footer-line-1">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google"></i></a>
+            </div>
+
+            <!-- Second line: Links -->
+            <div class="footer-line-2">
+                <a href="#">Advertising</a>
+                <a href="#">Jobs</a>
+                <a href="#">Help</a>
+                <a href="#">Conditions of Use</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <!-- Third line: Copyright -->
+            <div class="footer-line copyright">
+                © 2023 Your Website. All rights reserved.
+                <!-- You can replace the below icon with your copyright icon -->
+                <span>&#169;</span>
+            </div>
+        </footer>
+    </section>
+    <script src="/2AK-main/Js/detial.js"></script>
+</body>
+</html>
